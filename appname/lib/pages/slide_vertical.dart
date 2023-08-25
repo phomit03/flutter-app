@@ -45,7 +45,6 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
       title: 'Vinícius Júnior',
       description: 'The Brazilian player, is a positive source of energy for Real Madrid forward line. With his speed and dribbling skills, he often keeps the opposing defenders on their toes',
     ),
-    // Thêm các SlideItem khác vào đây
   ];
 
   @override
@@ -72,7 +71,7 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
                           left: 20,
                           child: Container(
                           constraints: const BoxConstraints(maxWidth: 320), // Giới hạn chiều ngang cho văn bản
-                            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                             decoration: BoxDecoration(
                               color: Color(0xFF141425).withOpacity(0.5), // Màu nền với độ mờ
                               borderRadius: BorderRadius.circular(8.0),
@@ -100,14 +99,14 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
                                 ElevatedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
-                                    primary: Color(0xFF141425), // Màu nền của nút
+                                    primary: const Color(0xFF141425), // Màu nền của nút
                                     onPrimary: Colors.amberAccent, // Màu chữ trên nút
-                                    padding: EdgeInsets.all(10),
+                                    padding: const EdgeInsets.all(10),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                   ),
-                                  child: Text('Details >>'),
+                                  child: const Text('Details >>'),
                                 ),
                               ],
                             ),
@@ -150,7 +149,7 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
 
   Widget _indicator(bool isActive) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 4.0),
+      margin: const EdgeInsets.symmetric(vertical: 4.0),
       height: 8.0,
       width: isActive ? 24.0 : 16.0,
       decoration: BoxDecoration(
