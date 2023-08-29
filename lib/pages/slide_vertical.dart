@@ -76,7 +76,7 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
                             constraints: const BoxConstraints(maxWidth: 320), // Giới hạn chiều ngang cho văn bản
                             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                             decoration: BoxDecoration(
-                              color: Color(0xFF141425).withOpacity(0.5), // Màu nền với độ mờ
+                              color: const Color(0xFF141425).withOpacity(0.5), // Màu nền với độ mờ
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Column(
@@ -102,7 +102,7 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
 
                                 ElevatedButton(
                                   onPressed: () {
-                                    //routes
+                                    //routes button
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) => const MainPage()),

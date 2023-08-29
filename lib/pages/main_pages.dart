@@ -28,7 +28,30 @@ class _MainPageState extends State<MainPage> {
             index: _currentIndex,
             // 1 children (screen) se ung voi 1 SalomonBottomBarItem
             children: [
-              Container (color: Colors.blue),
+              Stack(  //dat 2 lop tren nhau, bg:Container va noidung: SizedBox
+                children: [
+                  Container(
+                    color: Colors.blue,
+                    width: double.infinity, //double.infinity: full size
+                    height: double.infinity,
+                  ),
+                  const SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      children: [
+                        Text(
+                          "This is home page!",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
               Container (color: Colors.green),
               Container (color:Colors.pink),
               Container (color: Colors.red),
