@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main_pages.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -67,10 +69,11 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
                           fit: BoxFit.cover,
                         ),
                         Positioned(
-                          top: 620,
+                          bottom: MediaQuery.of(context).size.width * 0.2,
                           left: 20,
+                          width: MediaQuery.of(context).size.width * 0.8,
                           child: Container(
-                          constraints: const BoxConstraints(maxWidth: 320), // Giới hạn chiều ngang cho văn bản
+                            constraints: const BoxConstraints(maxWidth: 320), // Giới hạn chiều ngang cho văn bản
                             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                             decoration: BoxDecoration(
                               color: Color(0xFF141425).withOpacity(0.5), // Màu nền với độ mờ
@@ -96,8 +99,15 @@ class _VerticalSlideScreenState extends State<VerticalSlideScreen> {
                                   ),
                                 ),
                                 const SizedBox(height: 20),
+
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    //routes
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const MainPage()),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     primary: const Color(0xFF141425), // Màu nền của nút
                                     onPrimary: Colors.amberAccent, // Màu chữ trên nút
